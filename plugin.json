@@ -1,0 +1,19 @@
+{
+  "apiVersion": 1,
+  "kind": "theme",
+  "id": "eidos.forest-theme",
+  "name": "Forest",
+  "version": "0.1.0",
+  "requires": {
+    "pluginApi": "1.6.0"
+  },
+  "icon": {
+    "paths": [
+      "M20 4C10 4 4 10 4 20c10 0 16-6 16-16Z",
+      "M4 20c3-5 7-8 13-11"
+    ]
+  },
+  "theme": {
+    "stylesheet": "./theme.css"
+  }
+}

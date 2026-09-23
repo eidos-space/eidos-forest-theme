@@ -1,0 +1,63 @@
+:root[data-theme="light"] {
+  --theme-surface: #f8f7f2;
+  --theme-ink: #242b26;
+  --theme-accent: #356b52;
+  --theme-success: #276a45;
+  --theme-warning: #96591a;
+  --theme-danger: #ad4840;
+  --theme-neutral: #566478;
+  --lite-sidebar: #ebeee6;
+  --sidebar-strong: #dde5d9;
+  --surface-hover: #e9efe8;
+  --surface-active: #dae7dc;
+  --surface-selected: #cfe2d3;
+  --ink-muted: #526155;
+  --ink-faint: #68786c;
+  --line: #bfccc0;
+  --hairline: #d5dfd5;
+  --accent-strong: #27583f;
+  --accent-contrast: #ffffff;
+  --primary-action-hover: #285a43;
+  --focus: #2f7757;
+  --control-fill: #fffefa;
+  --control-border: #bdcbbb;
+  --font-ui: -apple-system, BlinkMacSystemFont, Avenir Next, Segoe UI, sans-serif;
+  --font-code: SFMono-Regular, Menlo, Consolas, monospace;
+  --font-editorial: Georgia, Times New Roman, serif;
+  --font-size-ui: 13px;
+  --font-size-code: 13px;
+  --chrome-header-height: 42px;
+  --control-radius: 7px;
+}
+
+:root[data-theme="dark"] {
+  --theme-surface: #1c2620;
+  --theme-ink: #e9f0e8;
+  --theme-accent: #92c9a7;
+  --theme-success: #85cf9c;
+  --theme-warning: #d9b672;
+  --theme-danger: #e6988f;
+  --theme-neutral: #b1c1c9;
+  --lite-sidebar: #202d24;
+  --sidebar-strong: #2b3c30;
+  --surface-hover: #293a2e;
+  --surface-active: #324736;
+  --surface-selected: #3a5540;
+  --ink-muted: #b5c7b6;
+  --ink-faint: #94aa97;
+  --line: #465f4b;
+  --hairline: #35493a;
+  --accent-strong: #b3dfc2;
+  --accent-contrast: #172b1e;
+  --primary-action-hover: #afdbbd;
+  --focus: #a8dcb9;
+  --control-fill: #27362b;
+  --control-border: #526b57;
+  --font-ui: -apple-system, BlinkMacSystemFont, Avenir Next, Segoe UI, sans-serif;
+  --font-code: SFMono-Regular, Menlo, Consolas, monospace;
+  --font-editorial: Georgia, Times New Roman, serif;
+  --font-size-ui: 13px;
+  --font-size-code: 13px;
+  --chrome-header-height: 42px;
+  --control-radius: 7px;
+}
