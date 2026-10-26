@@ -1,27 +1,23 @@
-# Forest 主题
+# 森林主题
 
-Forest 是一个可独立安装的 **Eidos Lite 宿主主题插件**，为整个应用提供暖纸色浅色界面和深森林色深色界面。它不是某个插件视图的主题，也不会按 Space 单独启用。
+为 Eidos Lite 提供暖纸浅色和深森林暗色配色。
 
-简短的 [`plugin.json`](plugin.json) 指向 [`theme.css`](theme.css)；CSS 包含背景、文字、侧栏、状态色、交互状态、字体和少量布局变量。插件包只有经过校验的 CSS，没有 JavaScript、远程字体、网络权限或 Space 数据访问权限。
+需要 **Eidos Lite 0.29.0** 及以上版本，支持插件 API **3.7.0**。名称和文档跟随应用语言。
 
 ## 安装与使用
 
-需要支持 **Plugin API 1.6.0** 的 Eidos Lite 开发版本。现有已发布的旧版 Lite 无法安装本主题。
+从插件市场或项目的 GitHub Release 安装归档，打开 **插件 → 森林 → 应用主题**。主题在本机所有 Space 生效；Lite 的浅色、深色或跟随系统设置决定使用哪套配色。点击 **使用默认主题** 可恢复内置外观，卸载当前主题也会恢复。
 
-1. 在 Lite 中打开 **插件 → 安装插件…**，选择 `dist/eidos.forest-theme-0.1.0.eidos-plugin`；也可以把该文件拖到插件管理器。
-2. 打开 **Forest** 详情，点击 **应用主题**。
-3. Lite 的浅色、深色或跟随系统设置仍决定使用 `light` 或 `dark` 配色。主题选择对这台设备上的所有 Space 生效。
-4. 点击 **使用默认主题** 可取消应用。卸载当前主题也会恢复默认界面。
+安装包只有经过验证的 CSS，不包含可执行代码、网络访问、远程字体或 Space 文件访问权限。CLI Serve、Android 和 iOS 不支持此宿主主题。
 
-## 从源码检查与打包
+## 开发
 
-当前 npm 上的 `@eidos.space/plugin-tools` 0.2.0 尚不支持主题插件。请指向包含 Plugin API 1.6.0 工具的 Eidos 源码检出：
+使用 Node.js 22.12 及以上版本，以及固定的公开 SDK/tools 0.9.0：
 
 ```sh
-export EIDOS_REPO_DIR=/absolute/path/to/eidos
-cd eidos-forest-theme
+npm ci
 npm run check
 npm run pack:plugin
 ```
 
-打包会生成 `.eidos-plugin` 和相邻的 `.sha256` 校验和文件。主题无需安装 npm 依赖。CLI Serve 不支持运行主题；CLI 仅可用于创建、检查和打包。
+归档及 SHA-256 校验文件位于 `dist/`。

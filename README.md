@@ -1,27 +1,23 @@
-# Forest theme
+# Forest
 
-Forest is a standalone **Eidos Lite host theme plugin**. It gives the whole app a warm paper palette in light mode and a deep forest palette in dark mode. It does not target an individual plugin view or enable separately in each Space.
+Forest gives Eidos Lite a warm paper light palette and a deep forest dark palette.
 
-[`plugin.json`](plugin.json) points to [`theme.css`](theme.css), which declares backgrounds, text, sidebar, status colors, interaction states, fonts, and a few layout tokens. The archive contains only validated CSS: no JavaScript, remote fonts, network permission, or access to Space data.
+Requires **Eidos Lite 0.29.0 or later**, with Plugin API **3.7.0**. Names and documentation follow the app language.
 
 ## Install and use
 
-Forest requires an Eidos Lite development build with **Plugin API 1.6.0**. Older published Lite versions cannot install it.
+Install the archive from Marketplace or the plugin's GitHub Release. Open **Plugins → Forest → Apply theme**. The theme applies across Spaces on this device; Lite's Light, Dark or System setting selects the palette. Choose **Use default theme** to restore the built-in appearance. Uninstalling the active theme also restores it.
 
-1. In Lite, choose **Plugins → Install plugin…** and select `dist/eidos.forest-theme-0.1.0.eidos-plugin`, or drop the archive into Plugin Manager.
-2. Open **Forest** and choose **Apply theme**.
-3. Lite's light, dark, or system appearance setting still selects the corresponding palette. The theme selection applies to every Space on this device.
-4. Choose **Use default theme** to clear the selection. Uninstalling an active theme also restores the default interface.
+The package contains validated CSS only. It has no executable code, network access, remote fonts or access to Space files. CLI Serve, Android and iOS do not support this host theme.
 
-## Check and package from source
+## Development
 
-The currently published `@eidos.space/plugin-tools` 0.2.0 does not yet support theme plugins. Point the scripts at an Eidos source checkout containing Plugin API 1.6.0 tooling:
+Use Node.js 22.12 or later and the pinned public SDK/tools 0.9.0:
 
 ```sh
-export EIDOS_REPO_DIR=/absolute/path/to/eidos
-cd eidos-forest-theme
+npm ci
 npm run check
 npm run pack:plugin
 ```
 
-Packing writes a `.eidos-plugin` archive and adjacent `.sha256` checksum to `dist/`. This theme needs no npm dependencies. CLI Serve cannot run themes; the CLI can create, check, and pack them.
+The archive and SHA-256 checksum are written to `dist/`.
